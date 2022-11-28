@@ -144,6 +144,7 @@ public class UserInfoEndpoint {
             authorization(accessToken);
         } catch (IllegalArgumentException e) {
             // not application/x-www-form-urlencoded, ignore
+        } catch (NullPointerException e) {
         }
 
         return issueUserInfo();
